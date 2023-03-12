@@ -1,0 +1,49 @@
+#include "linklist.h"
+Union(Node*st1,Node*st2){
+    Node*list3=NULL;
+    Node*p;
+    Node*q;
+    p=st1;
+    q=st2;
+    while(p!=NULL&&q!=NULL){
+        if(p->val==q->val){
+            insert_last(&list3,p->val);
+            p=p->next;
+            q=q->next;
+        }
+        else{
+            if(p->val<q->val){
+                insert_last(&list3,q->val);
+                p=p->next;
+            }
+            else{
+                insert_last(&list3,q->val);
+                q=q->next;
+            }
+        }
+}
+while(p!=NULL){
+insert_last(&list3,p->val);
+p=p->next;
+}
+while(q!=NULL){
+insert_last(&list3,q->val);
+q=q->next;
+}
+return list3;
+}
+int main(){
+    Node*st1=initialize();
+    Node*st2=initialize();
+    insert_beg(&st1,50);
+    insert_beg(&st1,40);
+    insert_beg(&st1,30);
+    insert_beg(&st1,20);
+    insert_beg(&st1,10);
+    insert_beg(&st2,100);
+    insert_beg(&st2,90);
+    insert_beg(&st2,80);
+    insert_beg(&st2,70);
+    insert_beg(&st2,60);
+    Union(st1,st2);
+}

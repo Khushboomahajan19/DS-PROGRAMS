@@ -1,0 +1,17 @@
+// WAP for deletion of all occurences of x from linklist
+#include "linklist.h"
+int main(){
+    Node*st1=initialize();
+    Node*st2=initialize();
+    insert_beg(&st1,50);
+    insert_beg(&st1,40);
+    insert_beg(&st1,30);
+    insert_beg(&st1,20);
+    insert_beg(&st1,10);
+    Node*delete(Node*start,Node*current){
+        if ()
+        {
+            /* code */
+        }
+        
+    }
